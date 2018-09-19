@@ -15,4 +15,7 @@ final class HelloController {
     func greet2(_ req: Request) throws -> String {
         return req.makeResponse("Hello").description
     }
+    func greetSelf(_ req: Request) throws -> String {
+        return "大家好! 我是你们的老朋友! 恒哥 ^_^"
+    }
 }

@@ -16,6 +16,7 @@ public func routes(_ router: Router) throws {
     let helloController = HelloController()
     router.get("greet", use: helloController.greet)
     router.get("greet2", use: helloController.greet2)
+    router.get("greetSelf", use: helloController.greetSelf)
     router.get("userId", Int.parameter) { req -> Int in
         let id = try req.parameters.next(Int.self)
         return id
